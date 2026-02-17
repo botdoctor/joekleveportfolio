@@ -2,6 +2,7 @@
   "name": "joe-kleve-cybersecurity-portfolio",
   "compatibility_date": "2026-02-16",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
   }
 }

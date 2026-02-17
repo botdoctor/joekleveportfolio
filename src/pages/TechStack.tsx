@@ -45,13 +45,13 @@ const TechStack: React.FC = () => {
       ],
     },
     {
-      name: 'DevOps & CI/CD',
+      name: 'Automation & Containers',
       icon: <GitBranch size={24} className="text-tech-blue" />,
       skills: [
         { name: 'Docker', level: 90 },
-        { name: 'GitHub Actions', level: 85 },
-        { name: 'Jenkins', level: 75 },
-        { name: 'AWS CodePipeline', level: 80 },
+        { name: 'GitHub Actions', level: 80 },
+        { name: 'Bash Scripting', level: 85 },
+        { name: 'Python Automation', level: 85 },
       ],
     },
     {
@@ -117,7 +117,7 @@ const TechStack: React.FC = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {[
                 'AWS CLI', 'Terraform', 'Ansible', 'Docker',
-                'Kubernetes', 'Git', 'GitHub Actions', 'Jenkins',
+                'Git', 'GitHub Actions', 'Docker Compose', 'Vite',
                 'Nginx', 'Apache', 'HAProxy', 'Let\'s Encrypt',
                 'Prometheus', 'Grafana', 'CloudWatch', 'Datadog',
                 'Vim', 'tmux', 'SSH', 'Vagrant',

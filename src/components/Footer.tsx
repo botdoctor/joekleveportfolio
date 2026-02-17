@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, Youtube, Github } from 'lucide-react';
+import { Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -14,16 +14,7 @@ const Footer: React.FC = () => {
 
           <div className="flex space-x-6">
             <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-tech-blue transition-colors duration-300"
-              aria-label="Instagram"
-            >
-              <Instagram size={20} />
-            </a>
-            <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/joe-kleve-2192b1356/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-tech-blue transition-colors duration-300"
@@ -32,16 +23,7 @@ const Footer: React.FC = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-tech-blue transition-colors duration-300"
-              aria-label="YouTube"
-            >
-              <Youtube size={20} />
-            </a>
-            <a
-              href="https://github.com"
+              href="https://github.com/botdoctor"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-tech-blue transition-colors duration-300"

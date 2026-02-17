@@ -29,7 +29,7 @@ const Home: React.FC = () => {
                   1000,
                   'AWS Solutions Architect',
                   1000,
-                  'DevOps Engineer',
+                  'Security Engineer',
                   1000,
                 ]}
                 className="font-sans"
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
               <p className="mb-2">$ whoami</p>
               <p className="mb-2">Joe Kleve - Cloud engineer with expertise in AWS, Linux administration, and infrastructure automation.</p>
               <p className="mb-2">$ skills --top</p>
-              <p className="mb-2">['AWS', 'Linux', 'Terraform', 'Docker', 'CI/CD']</p>
+              <p className="mb-2">['AWS', 'Linux', 'Terraform', 'Docker', 'Python']</p>
               <p>$ _</p>
             </TerminalWindow>
 
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
               <Code className="text-tech-blue mb-4" size={40} />
               <h3 className="text-xl font-semibold mb-3 text-navy">DevOps & Automation</h3>
               <p className="text-gray-500">
-                Building CI/CD pipelines, infrastructure as code with Terraform, containerization with Docker, and automated deployment workflows.
+                Automating infrastructure with Terraform, containerization with Docker, scripting with Python and Bash, and streamlining deployment workflows.
               </p>
             </motion.div>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cloud, Award, Code, Server, Terminal, GitBranch } from 'lucide-react';
+import { Cloud, Award, Code, Server, Terminal, Shield } from 'lucide-react';
 import TerminalWindow from '../components/TerminalWindow';
 import { projectsData } from '../data/projectsData';
 
@@ -18,46 +18,46 @@ const About: React.FC = () => {
         >
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-navy">About Me</h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="md:col-span-1">
               <div className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                 <img
-                  src="https://bendersec.xyz/webspin/unnamed.jpg"
+                  src="/headshot.JPG"
                   alt="Joe Kleve"
                   className="w-full h-auto"
                 />
                 <div className="p-4">
                   <h2 className="text-xl font-semibold text-navy mb-2">Joe Kleve</h2>
-                  <p className="text-gray-500 text-sm">Cloud Engineer & AWS Solutions Architect</p>
+                  <p className="text-gray-500 text-sm">Cloud Engineer | Builder</p>
                 </div>
               </div>
             </div>
 
             <div className="md:col-span-2">
-              <TerminalWindow title="about.sh" className="mb-6">
+              <TerminalWindow title="about.sh" className="h-full">
                 <p className="mb-2">$ cat joe_kleve.profile</p>
                 <p className="mb-4">
-                  Cloud engineer specializing in AWS infrastructure, Linux administration, and DevOps automation. Building reliable, scalable systems since age 14.
+                  Builder and problem-solver with a passion for cloud infrastructure, Linux, and automation. If it can be built, scripted, or deployed — I'm on it.
                 </p>
                 <p className="mb-2">$ experience --summary</p>
-                <p className="mb-4">Cloud architecture | Linux admin | Infrastructure as Code | CI/CD pipelines</p>
+                <p className="mb-4">AWS certified | Linux daily driver | Python + Bash automation | Docker & IaC | Full-stack when needed</p>
                 <p className="mb-2">$ cat mission.txt</p>
-                <p>To build resilient, automated cloud infrastructure that scales with business needs and follows best practices for security and cost optimization.</p>
+                <p>To keep building, keep learning, and engineer systems that actually work.</p>
               </TerminalWindow>
-
-              <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4 text-navy">My Journey</h3>
-                <p className="text-gray-600 mb-4">
-                  My fascination with technology began at age 14 when I built my first computer from spare parts. What started as curiosity quickly evolved into a passion for understanding how systems work and how to make them better.
-                </p>
-                <p className="text-gray-600 mb-4">
-                  Over the years, I've developed deep expertise in cloud architecture, Linux administration, and DevOps practices. I specialize in designing and deploying AWS infrastructure using infrastructure as code principles with Terraform and CloudFormation.
-                </p>
-                <p className="text-gray-600">
-                  Today, I focus on building scalable, secure cloud environments and automating infrastructure workflows. My approach combines hands-on Linux expertise with modern cloud-native practices to deliver reliable, cost-effective solutions.
-                </p>
-              </div>
             </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-navy">My Journey</h3>
+            <p className="text-gray-600 mb-4">
+              I've been taking things apart and putting them back together since I was 14 — that's when I built my first computer from spare parts. Since then I haven't stopped building.
+            </p>
+            <p className="text-gray-600 mb-4">
+              I write Python scripts that model financial data, build full-stack platforms with Docker and PostgreSQL, scrape and pipeline data at scale, and design web applications from scratch. I'm AWS and CompTIA certified, and I'm currently deepening my cloud architecture and Linux administration skills.
+            </p>
+            <p className="text-gray-600">
+              What drives me isn't any one technology — it's the process of figuring out how things work and making them better. I'm at my best when I'm solving real problems with real tools.
+            </p>
           </div>
 
           <div className="mb-12">
@@ -114,11 +114,11 @@ const About: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="flex items-start p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
               >
-                <GitBranch className="text-aws-orange mr-4 mt-1" size={24} />
+                <Shield className="text-aws-orange mr-4 mt-1" size={24} />
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-navy">DevOps & CI/CD</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-navy">Security Engineering</h3>
                   <p className="text-gray-500 text-sm">
-                    Building automated pipelines with GitHub Actions, Jenkins, and AWS CodePipeline for continuous integration and deployment.
+                    Security-first approach to infrastructure design, including network hardening, access controls, vulnerability assessment, and compliance.
                   </p>
                 </div>
               </motion.div>

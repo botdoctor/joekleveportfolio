@@ -19,34 +19,6 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    id: 'evilginx3-snapchat',
-    title: 'Evilginx3 Phishlet Development',
-    description: 'Developed a custom Snapchat phishlet for Evilginx3, demonstrating advanced reverse engineering and security research capabilities.',
-    fullDescription: 'Created a sophisticated Snapchat phishlet for the Evilginx3 framework, showcasing expertise in proxy development, JavaScript manipulation, and advanced web security concepts.',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-    date: 'February 2024',
-    tags: ['Evilginx3', 'Security Research', 'Reverse Engineering', 'Proxy Development'],
-    type: 'project',
-    details: [
-      {
-        title: 'Development Process',
-        content: 'Conducted thorough analysis of Snapchat\'s authentication flow and security mechanisms. Developed custom JavaScript triggers and handlers to intercept and process authentication data accurately.'
-      },
-      {
-        title: 'Technical Implementation',
-        content: 'Created specialized proxy rules and custom JavaScript injection points to handle Snapchat\'s complex authentication process. Implemented precise timing mechanisms for session capture and token management.'
-      },
-      {
-        title: 'Challenges Overcome',
-        content: 'Successfully bypassed various security measures including certificate pinning and JavaScript integrity checks. Developed solutions for handling dynamic content and maintaining session consistency.'
-      },
-      {
-        title: 'Research Impact',
-        content: 'The project contributed to understanding modern web application security mechanisms and authentication flows. Findings were used to improve security awareness and defensive measures.'
-      }
-    ]
-  },
-  {
     id: 'webspin-development',
     title: 'WebSpin.dev',
     description: 'Founded WebSpin.dev, crafting lightning-fast, SEO-optimized websites that combine stunning design with exceptional performance.',
@@ -73,6 +45,96 @@ export const projectsData: Project[] = [
       {
         title: 'Client Success',
         content: 'Our portfolio includes numerous successful projects where we\'ve helped businesses achieve significant improvements in website performance, user engagement, and search engine rankings through our optimized development approach.'
+      }
+    ]
+  },
+  {
+    id: 'comptia-security-plus',
+    title: 'CompTIA Security+',
+    description: 'Earned the CompTIA Security+ certification, validating core security skills and best practices for IT professionals.',
+    fullDescription: 'Successfully completed the CompTIA Security+ certification, demonstrating competency in network security, compliance, threats and vulnerabilities, identity management, and cryptography.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80',
+    date: 'March 2024',
+    client: 'CompTIA',
+    link: 'https://www.comptia.org/certifications/security',
+    tags: ['Security', 'Certification', 'Network Security', 'Compliance'],
+    type: 'certification',
+    details: [
+      {
+        title: 'Certification Overview',
+        content: 'CompTIA Security+ is a globally recognized certification that validates baseline security skills and knowledge across multiple vendor-neutral security topics.'
+      },
+      {
+        title: 'Key Areas',
+        content: 'Covered threats, attacks, and vulnerabilities; technologies and tools; architecture and design; identity and access management; risk management; and cryptography.'
+      },
+      {
+        title: 'Skills Demonstrated',
+        content: 'Ability to assess the security posture of an enterprise environment, recommend and implement security solutions, monitor and secure hybrid environments, and operate with an awareness of applicable laws and policies.'
+      },
+      {
+        title: 'Professional Application',
+        content: 'Applied security fundamentals to cloud infrastructure design, ensuring AWS environments follow security best practices and compliance requirements.'
+      }
+    ]
+  },
+  {
+    id: 'aws-ai-practitioner',
+    title: 'AWS Certified AI Practitioner',
+    description: 'Achieved AWS AI Practitioner certification, demonstrating knowledge of AI/ML concepts and AWS AI services.',
+    fullDescription: 'Earned the AWS Certified AI Practitioner certification, validating understanding of AI/ML concepts, AWS AI services like SageMaker, Bedrock, and best practices for implementing AI solutions on AWS.',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    date: 'September 2024',
+    client: 'Amazon Web Services',
+    link: 'https://aws.amazon.com/certification/',
+    tags: ['AWS', 'AI/ML', 'Certification', 'Cloud'],
+    type: 'certification',
+    details: [
+      {
+        title: 'Certification Overview',
+        content: 'The AWS Certified AI Practitioner certification validates foundational knowledge of AI/ML concepts and how to apply them using AWS services and tools.'
+      },
+      {
+        title: 'Core Competencies',
+        content: 'Demonstrated understanding of AI/ML fundamentals, AWS AI services including SageMaker and Bedrock, responsible AI practices, and AI solution architecture on AWS.'
+      },
+      {
+        title: 'Technical Skills',
+        content: 'Knowledge of machine learning pipelines, model training and deployment on AWS, generative AI concepts, and integration of AI services into cloud applications.'
+      },
+      {
+        title: 'Business Impact',
+        content: 'Ability to identify use cases for AI/ML in business operations and recommend appropriate AWS AI services to address organizational needs.'
+      }
+    ]
+  },
+  {
+    id: 'aws-solutions-architect',
+    title: 'AWS Solutions Architect Associate',
+    description: 'Earned the AWS Solutions Architect Associate certification, validating expertise in designing distributed systems on AWS.',
+    fullDescription: 'Successfully completed the AWS Certified Solutions Architect Associate certification, demonstrating the ability to design resilient, high-performing, secure, and cost-optimized architectures on AWS.',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80',
+    date: 'November 2024',
+    client: 'Amazon Web Services',
+    link: 'https://aws.amazon.com/certification/certified-solutions-architect-associate/',
+    tags: ['AWS', 'Solutions Architect', 'Certification', 'Cloud Architecture'],
+    type: 'certification',
+    details: [
+      {
+        title: 'Certification Overview',
+        content: 'The AWS Solutions Architect Associate certification validates the ability to design and deploy scalable, highly available, and fault-tolerant systems on AWS.'
+      },
+      {
+        title: 'Key Areas',
+        content: 'Covered designing resilient architectures, high-performing architectures, secure applications and architectures, and cost-optimized architectures following the AWS Well-Architected Framework.'
+      },
+      {
+        title: 'Skills Demonstrated',
+        content: 'Expertise in selecting appropriate AWS services for compute, storage, database, and networking. Designing multi-tier architectures, disaster recovery strategies, and migration plans.'
+      },
+      {
+        title: 'Professional Application',
+        content: 'Apply solutions architecture knowledge to design and implement production-ready AWS environments with proper security, scalability, and cost management.'
       }
     ]
   },

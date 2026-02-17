@@ -3,21 +3,21 @@ import { Instagram, Linkedin, Youtube, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-dark-800 border-t border-gray-800">
+    <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} Joe Kleve. All rights reserved.
             </p>
           </div>
-          
+
           <div className="flex space-x-6">
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-neon-green transition-colors duration-300"
+              className="text-gray-400 hover:text-tech-blue transition-colors duration-300"
               aria-label="Instagram"
             >
               <Instagram size={20} />
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-neon-green transition-colors duration-300"
+              className="text-gray-400 hover:text-tech-blue transition-colors duration-300"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-neon-green transition-colors duration-300"
+              className="text-gray-400 hover:text-tech-blue transition-colors duration-300"
               aria-label="YouTube"
             >
               <Youtube size={20} />
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-neon-green transition-colors duration-300"
+              className="text-gray-400 hover:text-tech-blue transition-colors duration-300"
               aria-label="GitHub"
             >
               <Github size={20} />

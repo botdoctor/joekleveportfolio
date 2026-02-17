@@ -23,8 +23,8 @@ const SkillBar: React.FC<SkillBarProps> = ({ name, level }) => {
   return (
     <div className="mb-4" ref={ref}>
       <div className="flex justify-between mb-1">
-        <span className="text-sm text-gray-300">{name}</span>
-        <span className="text-xs text-neon-green">{level}%</span>
+        <span className="text-sm text-gray-700">{name}</span>
+        <span className="text-xs text-tech-blue font-medium">{level}%</span>
       </div>
       <div className="skill-bar">
         <motion.div

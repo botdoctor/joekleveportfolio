@@ -21,18 +21,18 @@ const ExternalLinkCard: React.FC<ExternalLinkCardProps> = ({
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ y: -5 }}
-      className="block bg-dark-800 border border-gray-700 rounded-lg p-6 transition-all duration-300 hover:neon-border"
+      className="block bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:border-tech-blue"
     >
       <div className="flex items-start">
-        <div className="text-neon-green mr-4">
+        <div className="text-tech-blue mr-4">
           {icon}
         </div>
         <div>
           <div className="flex items-center">
-            <h3 className="text-lg font-semibold text-white mr-2">{title}</h3>
+            <h3 className="text-lg font-semibold text-navy mr-2">{title}</h3>
             <ExternalLink size={14} className="text-gray-400" />
           </div>
-          <p className="text-gray-400 text-sm mt-2">{description}</p>
+          <p className="text-gray-500 text-sm mt-2">{description}</p>
         </div>
       </div>
     </motion.a>

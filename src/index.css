@@ -1,245 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --scanline-height: 2px;
-  --scanline-opacity: 0.1;
-}
-
 body {
-  @apply bg-dark-900 text-gray-200;
+  @apply bg-white text-navy;
   margin: 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .terminal-text {
-  @apply font-mono text-terminal-green;
-}
-
-.neon-text {
-  text-shadow: 0 0 5px rgba(57, 255, 20, 0.7), 0 0 10px rgba(57, 255, 20, 0.5);
-}
-
-.neon-blue-text {
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-.neon-border {
-  box-shadow: 0 0 5px rgba(57, 255, 20, 0.7), 0 0 10px rgba(57, 255, 20, 0.5);
-  border: 1px solid #39FF14;
-}
-
-.neon-blue-border {
-  box-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.5);
-  border: 1px solid #00FFFF;
+  @apply font-mono text-terminal-teal;
 }
 
 .terminal-window {
-  @apply bg-dark-800 border border-neon-green rounded-md p-4 relative overflow-hidden;
-}
-
-.terminal-window::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--scanline-height);
-  background: rgba(57, 255, 20, var(--scanline-opacity));
-  opacity: 0.3;
-  animation: scanline 8s linear infinite;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.glitch {
-  position: relative;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.glitch::before {
-  left: 2px;
-  text-shadow: -1px 0 #00FFFF;
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-.glitch::after {
-  left: -2px;
-  text-shadow: -1px 0 #39FF14;
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim2 5s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim {
-  0% {
-    clip: rect(31px, 9999px, 94px, 0);
-  }
-  5% {
-    clip: rect(70px, 9999px, 71px, 0);
-  }
-  10% {
-    clip: rect(29px, 9999px, 83px, 0);
-  }
-  15% {
-    clip: rect(16px, 9999px, 91px, 0);
-  }
-  20% {
-    clip: rect(2px, 9999px, 23px, 0);
-  }
-  25% {
-    clip: rect(60px, 9999px, 73px, 0);
-  }
-  30% {
-    clip: rect(14px, 9999px, 56px, 0);
-  }
-  35% {
-    clip: rect(89px, 9999px, 25px, 0);
-  }
-  40% {
-    clip: rect(32px, 9999px, 26px, 0);
-  }
-  45% {
-    clip: rect(67px, 9999px, 96px, 0);
-  }
-  50% {
-    clip: rect(7px, 9999px, 13px, 0);
-  }
-  55% {
-    clip: rect(14px, 9999px, 76px, 0);
-  }
-  60% {
-    clip: rect(67px, 9999px, 66px, 0);
-  }
-  65% {
-    clip: rect(96px, 9999px, 58px, 0);
-  }
-  70% {
-    clip: rect(78px, 9999px, 81px, 0);
-  }
-  75% {
-    clip: rect(8px, 9999px, 1px, 0);
-  }
-  80% {
-    clip: rect(7px, 9999px, 75px, 0);
-  }
-  85% {
-    clip: rect(67px, 9999px, 40px, 0);
-  }
-  90% {
-    clip: rect(48px, 9999px, 15px, 0);
-  }
-  95% {
-    clip: rect(40px, 9999px, 31px, 0);
-  }
-  100% {
-    clip: rect(16px, 9999px, 84px, 0);
-  }
-}
-
-@keyframes glitch-anim2 {
-  0% {
-    clip: rect(96px, 9999px, 2px, 0);
-  }
-  5% {
-    clip: rect(46px, 9999px, 95px, 0);
-  }
-  10% {
-    clip: rect(66px, 9999px, 30px, 0);
-  }
-  15% {
-    clip: rect(86px, 9999px, 75px, 0);
-  }
-  20% {
-    clip: rect(40px, 9999px, 35px, 0);
-  }
-  25% {
-    clip: rect(71px, 9999px, 91px, 0);
-  }
-  30% {
-    clip: rect(2px, 9999px, 23px, 0);
-  }
-  35% {
-    clip: rect(92px, 9999px, 9px, 0);
-  }
-  40% {
-    clip: rect(80px, 9999px, 51px, 0);
-  }
-  45% {
-    clip: rect(35px, 9999px, 24px, 0);
-  }
-  50% {
-    clip: rect(35px, 9999px, 72px, 0);
-  }
-  55% {
-    clip: rect(77px, 9999px, 88px, 0);
-  }
-  60% {
-    clip: rect(39px, 9999px, 27px, 0);
-  }
-  65% {
-    clip: rect(48px, 9999px, 17px, 0);
-  }
-  70% {
-    clip: rect(81px, 9999px, 62px, 0);
-  }
-  75% {
-    clip: rect(91px, 9999px, 59px, 0);
-  }
-  80% {
-    clip: rect(84px, 9999px, 84px, 0);
-  }
-  85% {
-    clip: rect(46px, 9999px, 76px, 0);
-  }
-  90% {
-    clip: rect(72px, 9999px, 22px, 0);
-  }
-  95% {
-    clip: rect(83px, 9999px, 62px, 0);
-  }
-  100% {
-    clip: rect(81px, 9999px, 48px, 0);
-  }
+  @apply bg-navy border border-navy-light rounded-lg p-4 relative overflow-hidden;
 }
 
 .skill-bar {
-  @apply h-4 bg-dark-700 rounded-full overflow-hidden relative;
+  @apply h-3 bg-gray-200 rounded-full overflow-hidden relative;
 }
 
 .skill-progress {
   @apply h-full rounded-full;
-  background: linear-gradient(90deg, #39FF14, #00FFFF);
+  background: linear-gradient(90deg, #0066CC, #3388DD);
   transition: width 1s ease-in-out;
 }
 
 .project-card {
-  @apply bg-dark-800 border border-gray-700 rounded-lg overflow-hidden transition-all duration-300;
+  @apply bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 shadow-sm;
 }
 
 .project-card:hover {
-  @apply neon-border transform -translate-y-1;
-}
-
-.grid-pattern {
-  background-size: 50px 50px;
-  background-image: 
-    linear-gradient(to right, rgba(57, 255, 20, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+  @apply shadow-lg border-tech-blue transform -translate-y-1;
 }
 
 .typing-cursor::after {

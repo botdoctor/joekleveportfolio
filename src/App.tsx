@@ -13,18 +13,17 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
     return (
-      <div className="h-screen w-screen bg-black flex items-center justify-center">
-        <div className="text-neon-green font-mono text-xl">
-          <span className="inline-block animate-pulse">Initializing security protocols...</span>
+      <div className="h-screen w-screen bg-gray-warm flex items-center justify-center">
+        <div className="text-tech-blue font-sans text-xl">
+          <span className="inline-block animate-pulse">Loading portfolio...</span>
         </div>
       </div>
     );
@@ -32,7 +31,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-dark-900 text-gray-200 font-mono flex flex-col">
+      <div className="min-h-screen bg-white text-navy font-sans flex flex-col">
         <Navbar />
         <main className="flex-grow container mx-auto px-4 py-8">
           <Routes>

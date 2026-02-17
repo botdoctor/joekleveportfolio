@@ -22,7 +22,7 @@ const About: React.FC = () => {
             <div className="md:col-span-1">
               <div className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                 <img
-                  src="/headshot.JPG"
+                  src="/headshot.jpg"
                   alt="Joe Kleve"
                   className="w-full h-auto"
                 />

@@ -114,7 +114,27 @@ const ProjectDetail: React.FC = () => {
                   </div>
                 )}
 
-                {project.link && (
+                {project.links && project.links.length > 0 && (
+                  <div className="mb-4">
+                    <div className="flex items-center text-gray-400 mb-2">
+                      <ExternalLink size={16} className="mr-2" />
+                      <span className="text-sm">Links</span>
+                    </div>
+                    {project.links.map((link, index) => (
+                      <a
+                        key={index}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-tech-blue hover:underline mb-1 last:mb-0"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+
+                {!project.links && project.link && (
                   <div className="mb-4">
                     <div className="flex items-center text-gray-400 mb-2">
                       <ExternalLink size={16} className="mr-2" />

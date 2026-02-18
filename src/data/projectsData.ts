@@ -3,6 +3,11 @@ export interface ProjectDetail {
   content: string;
 }
 
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -12,6 +17,7 @@ export interface Project {
   date: string;
   client?: string;
   link?: string;
+  links?: ProjectLink[];
   tags: string[];
   type: 'project' | 'certification' | 'business';
   details?: ProjectDetail[];
@@ -102,6 +108,38 @@ export const projectsData: Project[] = [
       {
         title: 'Configurable Simulation Parameters',
         content: 'All inputs are driven by a JSON configuration file: iteration count, projection horizon, age-specific growth distributions, market multipliers, song age groups with streaming volumes, and financial parameters including investment size, per-stream revenue, and discount rate.'
+      }
+    ]
+  },
+  {
+    id: 'aws-portfolio-deployment',
+    title: 'Production Portfolio Deployment on AWS',
+    description: 'Fully automated, production-grade static site hosting pipeline on AWS with global CDN distribution, automated TLS, and a zero-touch CI/CD pipeline using OIDC keyless authentication.',
+    fullDescription: 'Yes, this is absolutely overkill for a React portfolio site. A single Cloudflare Pages deploy would have taken 30 seconds. But where\'s the fun in that? Instead, I architected and deployed a fully automated, production-grade static site hosting pipeline on AWS using Infrastructure as Code. The solution serves joekleve.com with global CDN distribution via 400+ CloudFront edge locations, automated TLS termination through ACM, and a zero-touch CI/CD pipeline that deploys on every Git push with no static credentials stored anywhere. The entire infrastructure is reproducible from scratch in under 10 minutes via Terraform.',
+    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    date: 'February 2026',
+    links: [
+      { label: 'Application Code', url: 'https://github.com/botdoctor/joekleveportfolio' },
+      { label: 'Infrastructure Code', url: 'https://github.com/botdoctor/joekleveportfolio-infra' }
+    ],
+    tags: ['AWS', 'Terraform', 'CloudFront', 'S3', 'GitHub Actions', 'OIDC', 'CI/CD'],
+    type: 'project',
+    details: [
+      {
+        title: 'Infrastructure as Code with Terraform',
+        content: 'Full infrastructure provisioned via modular Terraform architecture with four independent modules (S3, ACM, CloudFront, Route 53) and explicit output/variable wiring between them. Terraform provisions resources in dependency order: Route 53 hosted zone first for DNS-based certificate validation, then CloudFront with the validated cert ARN and Origin Access Control, and finally alias records pointing the apex and www subdomain to the distribution. Entire stack reproducible from scratch in under 10 minutes.'
+      },
+      {
+        title: 'Zero-Credential CI/CD Pipeline',
+        content: 'Every push to main triggers an automated GitHub Actions workflow: Node.js builds the React application, GitHub Actions authenticates to AWS using OpenID Connect (OIDC) to obtain short-lived temporary credentials scoped to a specific IAM role. No static AWS access keys stored in GitHub Secrets or anywhere in the codebase. Build artifacts are synced to S3 with the --delete flag to remove stale files, and a CloudFront cache invalidation ensures edge nodes serve fresh content immediately. Full deployment completes in under 2 minutes.'
+      },
+      {
+        title: 'Security Design',
+        content: 'Private S3 bucket with all public access blocked. Content is served exclusively through CloudFront using Origin Access Control with SigV4 signing. Least-privilege IAM role scoped to only s3:PutObject, s3:DeleteObject, s3:ListBucket on the specific bucket and cloudfront:CreateInvalidation on the specific distribution. TLS 1.2+ enforced with HTTP-to-HTTPS redirect, and AWS Shield Standard provides baseline DDoS protection at no additional cost.'
+      },
+      {
+        title: 'Key Implementation Challenges',
+        content: 'Solved ACM/CloudFront regional constraint using Terraform provider aliasing to provision certificates in us-east-1 regardless of primary region. Handled DNS propagation ordering by targeting the hosted zone first, configuring nameservers at the registrar, then running the full apply for certificate validation. Configured CloudFront custom error responses to return index.html with 200 status for 403/404 errors, enabling React Router client-side navigation on S3-backed hosting.'
       }
     ]
   },
